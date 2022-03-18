@@ -1,0 +1,19 @@
+module birthday(
+input  btn,
+output year_1,
+output year_2,
+output month_1,
+output month_2,
+output day_1,
+output day_2
+);
+
+assign year_1  = ~btn ;
+assign year_2  = ~btn ;
+assign month_1 = ~btn ;
+assign month_2 = ~btn ;
+assign day_1   = ~btn ;
+assign day_2   = ~btn ;
+
+endmodule
+

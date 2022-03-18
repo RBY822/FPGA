@@ -1,0 +1,629 @@
+Analysis & Synthesis report for 2
+Fri Mar 18 16:34:28 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Source assignments for Top-level Entity: |adder
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Mar 18 16:34:28 2022       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                   ; 2                                           ;
+; Top-level Entity Name           ; adder                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 55                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; adder              ; 2                  ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; 6.v                              ; yes             ; User Verilog HDL File  ; D:/Quartus/6.v               ;         ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 162       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 260       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 64        ;
+;     -- 5 input functions                    ; 40        ;
+;     -- 4 input functions                    ; 51        ;
+;     -- <=3 input functions                  ; 105       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 55        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; always1~0 ;
+; Maximum fan-out                             ; 21        ;
+; Total fan-out                               ; 1178      ;
+; Average fan-out                             ; 3.18      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |adder                     ; 260 (45)            ; 0 (0)                     ; 0                 ; 0          ; 55   ; 0            ; |adder              ; adder       ; work         ;
+;    |BCD:total|             ; 125 (125)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|BCD:total    ; BCD         ; work         ;
+;    |fgh:aa|                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|fgh:aa       ; fgh         ; work         ;
+;    |fgh:bb|                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|fgh:bb       ; fgh         ; work         ;
+;    |fgh:cc|                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|fgh:cc       ; fgh         ; work         ;
+;    |fgh:dd|                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|fgh:dd       ; fgh         ; work         ;
+;    |fgh:ee|                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|fgh:ee       ; fgh         ; work         ;
+;    |fgh:ff|                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |adder|fgh:ff       ; fgh         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; fgh:aa|seven_seg[0]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:aa|seven_seg[1]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:aa|seven_seg[2]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:aa|seven_seg[3]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:aa|seven_seg[4]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:aa|seven_seg[5]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:aa|seven_seg[6]                                 ; fgh:aa|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[0]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[1]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[2]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[3]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[4]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[5]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:bb|seven_seg[6]                                 ; fgh:bb|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[0]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[1]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[2]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[3]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[4]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[5]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:cc|seven_seg[6]                                 ; fgh:cc|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[0]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[1]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[2]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[3]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[4]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[5]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:dd|seven_seg[6]                                 ; fgh:dd|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[0]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[1]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[2]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[3]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[4]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[5]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ee|seven_seg[6]                                 ; fgh:ee|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[0]                                 ; fgh:ff|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[1]                                 ; fgh:ff|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[2]                                 ; fgh:ff|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[3]                                 ; fgh:ff|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[4]                                 ; fgh:ff|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[5]                                 ; fgh:ff|Mux7         ; yes                    ;
+; fgh:ff|seven_seg[6]                                 ; fgh:ff|Mux7         ; yes                    ;
+; sum_1st[15]                                         ; always1             ; yes                    ;
+; sum_1st[16]                                         ; always1             ; yes                    ;
+; sum_1st[17]                                         ; always1             ; yes                    ;
+; sum_1st[19]                                         ; always1             ; yes                    ;
+; sum_1st[18]                                         ; always1             ; yes                    ;
+; sum_1st[14]                                         ; always1             ; yes                    ;
+; sum_1st[13]                                         ; always1             ; yes                    ;
+; sum_1st[12]                                         ; always1             ; yes                    ;
+; sum_1st[11]                                         ; always1             ; yes                    ;
+; sum_1st[10]                                         ; always1             ; yes                    ;
+; sum_1st[9]                                          ; always1             ; yes                    ;
+; sum_1st[8]                                          ; always1             ; yes                    ;
+; sum_1st[7]                                          ; always1             ; yes                    ;
+; sum_1st[6]                                          ; always1             ; yes                    ;
+; sum_1st[5]                                          ; always1             ; yes                    ;
+; sum_1st[4]                                          ; always1             ; yes                    ;
+; sum_1st[3]                                          ; always1             ; yes                    ;
+; sum_1st[2]                                          ; always1             ; yes                    ;
+; sum_1st[1]                                          ; always1             ; yes                    ;
+; sum_1st[0]                                          ; always1             ; yes                    ;
+; flag                                                ; always1             ; yes                    ;
+; Number of user-specified and inferred latches = 63  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------+
+; Source assignments for Top-level Entity: |adder ;
++-------------+-------------+------+--------------+
+; Assignment  ; Value       ; From ; To           ;
++-------------+-------------+------+--------------+
+; LOCATION    ; Pin_AA25    ; -    ; equ_1[6]     ;
+; LOCATION    ; Pin_AA26    ; -    ; equ_1[5]     ;
+; LOCATION    ; Pin_AB26    ; -    ; equ_1[4]     ;
+; LOCATION    ; Pin_AB27    ; -    ; equ_1[3]     ;
+; LOCATION    ; Pin_Y27     ; -    ; equ_1[2]     ;
+; LOCATION    ; Pin_AA28    ; -    ; equ_1[1]     ;
+; LOCATION    ; Pin_V25     ; -    ; equ_1[0]     ;
+; LOCATION    ; Pin_W25     ; -    ; equ_2[6]     ;
+; LOCATION    ; Pin_V23     ; -    ; equ_2[5]     ;
+; LOCATION    ; Pin_W24     ; -    ; equ_2[4]     ;
+; LOCATION    ; Pin_W22     ; -    ; equ_2[3]     ;
+; LOCATION    ; Pin_Y24     ; -    ; equ_2[2]     ;
+; LOCATION    ; Pin_Y23     ; -    ; equ_2[1]     ;
+; LOCATION    ; Pin_AA24    ; -    ; equ_2[0]     ;
+; LOCATION    ; Pin_AB22    ; -    ; equ_3[6]     ;
+; LOCATION    ; Pin_AB25    ; -    ; equ_3[5]     ;
+; LOCATION    ; Pin_AB28    ; -    ; equ_3[4]     ;
+; LOCATION    ; Pin_AC25    ; -    ; equ_3[3]     ;
+; LOCATION    ; Pin_AD25    ; -    ; equ_3[2]     ;
+; LOCATION    ; Pin_AC27    ; -    ; equ_3[1]     ;
+; LOCATION    ; Pin_AD26    ; -    ; equ_3[0]     ;
+; LOCATION    ; Pin_AC30    ; -    ; equ_4[6]     ;
+; LOCATION    ; Pin_AC29    ; -    ; equ_4[5]     ;
+; LOCATION    ; Pin_AD30    ; -    ; equ_4[4]     ;
+; LOCATION    ; Pin_AC28    ; -    ; equ_4[3]     ;
+; LOCATION    ; Pin_AD29    ; -    ; equ_4[2]     ;
+; LOCATION    ; Pin_AE29    ; -    ; equ_4[1]     ;
+; LOCATION    ; Pin_AB23    ; -    ; equ_4[0]     ;
+; LOCATION    ; Pin_AD27    ; -    ; equ_5[6]     ;
+; LOCATION    ; Pin_AF30    ; -    ; equ_5[5]     ;
+; LOCATION    ; Pin_AF29    ; -    ; equ_5[4]     ;
+; LOCATION    ; Pin_AG30    ; -    ; equ_5[3]     ;
+; LOCATION    ; Pin_AH30    ; -    ; equ_5[2]     ;
+; LOCATION    ; Pin_AH29    ; -    ; equ_5[1]     ;
+; LOCATION    ; Pin_AJ29    ; -    ; equ_5[0]     ;
+; LOCATION    ; Pin_AH28    ; -    ; equ_6[6]     ;
+; LOCATION    ; Pin_AG28    ; -    ; equ_6[5]     ;
+; LOCATION    ; Pin_AF28    ; -    ; equ_6[4]     ;
+; LOCATION    ; Pin_AG27    ; -    ; equ_6[3]     ;
+; LOCATION    ; Pin_AE28    ; -    ; equ_6[2]     ;
+; LOCATION    ; Pin_AE27    ; -    ; equ_6[1]     ;
+; LOCATION    ; Pin_AE26    ; -    ; equ_6[0]     ;
+; LOCATION    ; Pin_Y16     ; -    ; btn_1        ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; btn_1        ;
+; LOCATION    ; Pin_W15     ; -    ; btn_2        ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; btn_2        ;
+; LOCATION    ; Pin_AA15    ; -    ; btn_3        ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; btn_3        ;
+; LOCATION    ; Pin_AB12    ; -    ; sw_0         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_0         ;
+; LOCATION    ; Pin_AC12    ; -    ; sw_1         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_1         ;
+; LOCATION    ; Pin_AF9     ; -    ; sw_2         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_2         ;
+; LOCATION    ; Pin_AF10    ; -    ; sw_3         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_3         ;
+; LOCATION    ; Pin_AD11    ; -    ; sw_4         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_4         ;
+; LOCATION    ; Pin_AD12    ; -    ; sw_5         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_5         ;
+; LOCATION    ; Pin_AE11    ; -    ; sw_6         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_6         ;
+; LOCATION    ; Pin_AC9     ; -    ; sw_7         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_7         ;
+; LOCATION    ; Pin_AD10    ; -    ; sw_8         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_8         ;
+; LOCATION    ; Pin_AE12    ; -    ; sw_9         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; sw_9         ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[6]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[5]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[4]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[3]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[2]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[1]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_1[0]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[6]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[5]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[4]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[3]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[2]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[1]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_2[0]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[6]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[5]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[4]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[3]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[2]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[1]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_3[0]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[6]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[5]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[4]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[3]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[2]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[1]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_4[0]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[6]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[5]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[4]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[3]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[2]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[1]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_5[0]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[6]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[5]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[4]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[3]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[2]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[1]     ;
+; IO_STANDARD ; 3.3-V LVTTL ; -    ; equ_6[0]     ;
++-------------+-------------+------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 260                         ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 10                          ;
+;     normal            ; 240                         ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 51                          ;
+;         5 data inputs ; 40                          ;
+;         6 data inputs ; 64                          ;
+; boundary_port         ; 55                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 7.84                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Fri Mar 18 16:34:16 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2 -c 2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file 3.v
+    Info (12023): Found entity 1: cdf File: D:/Quartus/3.v Line: 1
+    Info (12023): Found entity 2: fgh_aa File: D:/Quartus/3.v Line: 77
+Info (12021): Found 3 design units, including 3 entities, in source file 6.v
+    Info (12023): Found entity 1: adder File: D:/Quartus/6.v Line: 1
+    Info (12023): Found entity 2: BCD File: D:/Quartus/6.v Line: 128
+    Info (12023): Found entity 3: fgh File: D:/Quartus/6.v Line: 191
+Info (12127): Elaborating entity "adder" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at 6.v(113): inferring latch(es) for variable "sum_1st", which holds its previous value in one or more paths through the always construct File: D:/Quartus/6.v Line: 113
+Warning (10240): Verilog HDL Always Construct warning at 6.v(113): inferring latch(es) for variable "flag", which holds its previous value in one or more paths through the always construct File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[0]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[1]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[2]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[3]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[4]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[5]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[6]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[7]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[8]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[9]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[10]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[11]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[12]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[13]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[14]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[15]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[16]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[17]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[18]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "sum_1st[19]" at 6.v(113) File: D:/Quartus/6.v Line: 113
+Info (10041): Inferred latch for "flag" at 6.v(118) File: D:/Quartus/6.v Line: 118
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:total" File: D:/Quartus/6.v Line: 103
+Warning (10230): Verilog HDL assignment warning at 6.v(170): truncated value with size 32 to match size of target (4) File: D:/Quartus/6.v Line: 170
+Warning (10230): Verilog HDL assignment warning at 6.v(168): truncated value with size 32 to match size of target (4) File: D:/Quartus/6.v Line: 168
+Warning (10230): Verilog HDL assignment warning at 6.v(166): truncated value with size 32 to match size of target (4) File: D:/Quartus/6.v Line: 166
+Warning (10230): Verilog HDL assignment warning at 6.v(164): truncated value with size 32 to match size of target (4) File: D:/Quartus/6.v Line: 164
+Warning (10230): Verilog HDL assignment warning at 6.v(162): truncated value with size 32 to match size of target (4) File: D:/Quartus/6.v Line: 162
+Warning (10230): Verilog HDL assignment warning at 6.v(160): truncated value with size 32 to match size of target (4) File: D:/Quartus/6.v Line: 160
+Info (12128): Elaborating entity "fgh" for hierarchy "fgh:aa" File: D:/Quartus/6.v Line: 105
+Warning (10270): Verilog HDL Case Statement warning at 6.v(201): incomplete case statement has no default case item File: D:/Quartus/6.v Line: 201
+Warning (10240): Verilog HDL Always Construct warning at 6.v(201): inferring latch(es) for variable "seven_seg", which holds its previous value in one or more paths through the always construct File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[0]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[1]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[2]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[3]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[4]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[5]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (10041): Inferred latch for "seven_seg[6]" at 6.v(201) File: D:/Quartus/6.v Line: 201
+Info (13014): Ignored 13 buffer(s)
+    Info (13019): Ignored 13 SOFT buffer(s)
+Warning (13012): Latch fgh:aa|seven_seg[0] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[1]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:aa|seven_seg[1] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[2]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:aa|seven_seg[2] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[2]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:aa|seven_seg[3] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[1]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:aa|seven_seg[4] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[2]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:aa|seven_seg[5] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[1]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:aa|seven_seg[6] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|onehunthousands[1]~synth File: D:/Quartus/6.v Line: 139
+Warning (13012): Latch fgh:bb|seven_seg[0] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[1]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:bb|seven_seg[1] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[2]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:bb|seven_seg[2] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[2]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:bb|seven_seg[3] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[1]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:bb|seven_seg[4] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[2]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:bb|seven_seg[5] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[1]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:bb|seven_seg[6] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tenthousands[1]~synth File: D:/Quartus/6.v Line: 140
+Warning (13012): Latch fgh:cc|seven_seg[0] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[1]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:cc|seven_seg[1] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[2]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:cc|seven_seg[2] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[2]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:cc|seven_seg[3] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[1]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:cc|seven_seg[4] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[2]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:cc|seven_seg[5] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[1]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:cc|seven_seg[6] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|thousands[1]~synth File: D:/Quartus/6.v Line: 141
+Warning (13012): Latch fgh:dd|seven_seg[0] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[1]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:dd|seven_seg[1] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[2]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:dd|seven_seg[2] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[2]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:dd|seven_seg[3] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[1]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:dd|seven_seg[4] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[2]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:dd|seven_seg[5] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[1]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:dd|seven_seg[6] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|hundreds[1]~synth File: D:/Quartus/6.v Line: 142
+Warning (13012): Latch fgh:ee|seven_seg[0] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[1]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ee|seven_seg[1] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[2]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ee|seven_seg[2] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[2]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ee|seven_seg[3] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[1]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ee|seven_seg[4] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[2]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ee|seven_seg[5] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[1]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ee|seven_seg[6] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:total|tens[1]~synth File: D:/Quartus/6.v Line: 143
+Warning (13012): Latch fgh:ff|seven_seg[0] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch fgh:ff|seven_seg[1] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch fgh:ff|seven_seg[2] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch fgh:ff|seven_seg[3] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch fgh:ff|seven_seg[4] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch fgh:ff|seven_seg[5] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch fgh:ff|seven_seg[6] has unsafe behavior File: D:/Quartus/6.v Line: 201
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sum_1st[1] File: D:/Quartus/6.v Line: 113
+Warning (13012): Latch flag has unsafe behavior File: D:/Quartus/6.v Line: 48
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal flag File: D:/Quartus/6.v Line: 48
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/Quartus/output_files/2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 260 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 97 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Fri Mar 18 16:34:28 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Quartus/output_files/2.map.smsg.
+
+

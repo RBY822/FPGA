@@ -1,0 +1,55 @@
+module adder(
+btn_1,
+btn_2,
+btn_3,
+sw_0,
+sw_1,
+sw_2,
+sw_3,
+sw_4,
+sw_5,
+sw_6,
+sw_7,
+sw_8,
+sw_9,
+num_1,
+num_2,
+num_3,
+num_4,
+num_5,
+num_6
+);
+
+input          btn_1   /* synthesis altera_chip_pin_lc="Y16"                                altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          btn_2   /* synthesis altera_chip_pin_lc="W15"                                altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          btn_3   /* synthesis altera_chip_pin_lc="AA15"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_0;   /* synthesis altera_chip_pin_lc="AB12"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_1;   /* synthesis altera_chip_pin_lc="AC12"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_2;   /* synthesis altera_chip_pin_lc="AF9"                                altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_3;   /* synthesis altera_chip_pin_lc="AF10"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_4;   /* synthesis altera_chip_pin_lc="AD11"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_5;   /* synthesis altera_chip_pin_lc="AD12"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_6;   /* synthesis altera_chip_pin_lc="AE11"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_7;   /* synthesis altera_chip_pin_lc="AC9"                                altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_8;   /* synthesis altera_chip_pin_lc="AD10"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+input          sw_9;   /* synthesis altera_chip_pin_lc="AE12"                               altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+output  [6:0]  num_1   /* synthesis altera_chip_pin_lc="AA25,AA26,AB26,AB27,Y27, AA28,V25"  altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+output  [6:0]  num_2   /* synthesis altera_chip_pin_lc="W25, V23, W24, W22, Y24, Y23, AA24" altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+output  [6:0]  num_3   /* synthesis altera_chip_pin_lc="AB22,AB25,AB28,AC25,AD25,AC27,AD26" altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+output  [6:0]  num_4   /* synthesis altera_chip_pin_lc="AC30,AC29,AD30,AC28,AD29,AE29,AB23" altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+output  [6:0]  num_5   /* synthesis altera_chip_pin_lc="AD27,AF30,AF29,AG30,AH30,AH29,AJ29" altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+output  [6:0]  num_6   /* synthesis altera_chip_pin_lc="AH28,AG28,AF28,AG27,AE28,AE27,AE26" altera_attribute = "-name IO_STANDARD \"3.3-V LVTTL\" " */;
+
+sw_0 1
+sw_1 2
+sw_2 4
+sw_3 8
+sw_4 16
+sw_5 32
+sw_6 64
+sw_7 128
+sw_8 256
+sw_9 512
+
+
+	  
